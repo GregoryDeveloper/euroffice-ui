@@ -1,0 +1,11 @@
+<div>
+	<h2>Categories</h2>
+	<div>
+			<select class="selection" [ngModel]="selectedCategory" (ngModelChange)="onChange($event)">
+					<option class="size" *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
+			</select>
+	</div>
+	<div class="center" *ngFor="let image of images" >
+		<img class="picture" src='{{image.url}}'/>
+	</div>	
+</div>
